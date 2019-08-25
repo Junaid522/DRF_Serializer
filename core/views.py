@@ -5,11 +5,11 @@ from core.serializers import UserSerializer, GroupSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
 
-    query = User.objects.all().order_by('-date_joined')
+    queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
 
 
 class GroupViewSet(viewsets.ModelViewSet):
 
-    query = Group.objects.all()
+    queryset = Group.objects.all()
     serializer_class = GroupSerializer
